@@ -1,0 +1,12 @@
+<p>parent works!</p>
+<h4>Parent to ChildCOmmunication</h4>
+<div>
+    <h5>Welcome to Parent Component</h5>
+    <input type="text" (keyup)="o" #childNeedValue>
+    <h3>Value recieved from child: {{childValue}}</h3>
+
+</div>
+<div class="well">
+    <app-child [parentValue]="childNeedValue.value" (childChanged)="childValue=$event"></app-child>
+
+</div>
